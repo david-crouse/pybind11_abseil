@@ -77,11 +77,8 @@ target_link_libraries(check_status_module_imported INTERFACE
 add_library(status_caster INTERFACE)
 add_library(pybind11_abseil::status_caster ALIAS status_caster)
 
-message(${CMAKE_CURRENT_SOURCE_DIR})
 target_include_directories(status_caster INTERFACE
-$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
-target_include_directories(status_caster INTERFACE
-$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/cpp_capsule_tools>)
+$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>)
 
 target_link_libraries(status_caster INTERFACE
     check_status_module_imported
