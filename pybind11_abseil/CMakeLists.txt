@@ -77,6 +77,8 @@ target_link_libraries(check_status_module_imported INTERFACE
 add_library(status_caster INTERFACE)
 add_library(pybind11_abseil::status_caster ALIAS status_caster)
 
+target_include_directories(. ./cpp_capsule_tools)
+
 target_link_libraries(status_caster INTERFACE
     check_status_module_imported
     no_throw_status
