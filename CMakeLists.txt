@@ -25,5 +25,6 @@ FetchContent_declare(
 FetchContent_MakeAvailable(abseil-cpp pybind11)
 
 include_directories(. ${PYTHON_INCLUDE_DIR} ${pybind11_INCLUDE_DIRS})
+set(TOP_LEVEL_DIR ${CMAKE_CURRENT_LIST_DIR})
 
 add_subdirectory(pybind11_abseil)

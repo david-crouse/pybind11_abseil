@@ -78,7 +78,7 @@ add_library(status_caster INTERFACE)
 add_library(pybind11_abseil::status_caster ALIAS status_caster)
 
 target_include_directories(status_caster INTERFACE
-$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}>)
+$<BUILD_INTERFACE:${TOP_LEVEL_DIR}>)
 
 target_link_libraries(status_caster INTERFACE
     check_status_module_imported
